@@ -46,3 +46,13 @@ nav a:before {
 nav a:hover::before{
     width: 100%;
 }
+
+body {
+    background-image: url("beer_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    display: block;
+}
