@@ -1,5 +1,12 @@
 nav {
-    float:right;
+    float:center;
+}
+
+.navbar-brand {
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav ul {
@@ -17,6 +24,8 @@ nav li {
 
 }
 
+
+
 nav a {
     color:#444;
     text-decoration: none;
@@ -26,7 +35,11 @@ nav a {
 }
 
 nav a:hover {
-    color: #000;
+    color: #444;
+}
+
+navbar-brand:hover{
+    color:transparent;
 }
 
 nav a:before {
