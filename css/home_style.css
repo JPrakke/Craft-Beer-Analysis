@@ -48,7 +48,7 @@ nav a:hover::before{
 }
 
 body {
-    background-image: url("beer_background.jpg");
+    background-image: url("../assets/beer_background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
