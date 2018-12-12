@@ -46,3 +46,21 @@ nav a:before {
 nav a:hover::before{
     width: 100%;
 }
+
+body { 
+    background-image:url('https://i.pinimg.com/originals/9e/13/d2/9e13d2289ddf24d59b692dafc27f4ca7.gif'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+footer {
+    display: block;
+}
+
+header  {
+    font-size: 60px;
+    color: #000;
+    font-style: italic;
+    font-weight: 700;
+}
