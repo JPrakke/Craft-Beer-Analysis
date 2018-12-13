@@ -65,3 +65,30 @@ header  {
     font-weight: 500;
     font-family: impact
 }
+
+table {
+    width: 1400 px;
+    margin: auto;
+    text-align: center;
+    table-layout: fixed;
+}
+
+table, tr, th, td {
+    padding: 20px;
+    color: white;
+    border: 1px solid #000000;
+    font-family: Arial;
+    font-size: 20px;
+
+}
+
+th {
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+
+td:hover::after, 
+th:hover::after {
+    background-color: black;
+}
