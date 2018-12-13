@@ -60,7 +60,34 @@ footer {
 
 header  {
     font-size: 60px;
-    color: #000;
+    color: #fdfcfc;
     font-style: italic;
-    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+table {
+    width: 1400 px;
+    margin: auto;
+    text-align: center;
+    table-layout: fixed;
+}
+
+table, tr, th, td {
+    padding: 20px;
+    color: white;
+    border: 1px solid #fdfcfc;
+    font-family: Arial;
+    font-size: 20px;
+
+}
+
+th {
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+
+td:hover::after, 
+th:hover::after {
+    background-color: rgb(99, 97, 97);
 }
