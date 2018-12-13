@@ -60,11 +60,9 @@ footer {
 
 header  {
     font-size: 60px;
-    color: #000;
+    color: #fdfcfc;
     font-style: italic;
-<<<<<<< HEAD:css/style.css
-    font-weight: 500;
-    font-family: impact
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 table {
@@ -77,7 +75,7 @@ table {
 table, tr, th, td {
     padding: 20px;
     color: white;
-    border: 1px solid #000000;
+    border: 1px solid #fdfcfc;
     font-family: Arial;
     font-size: 20px;
 
@@ -91,9 +89,5 @@ th {
 
 td:hover::after, 
 th:hover::after {
-    background-color: black;
+    background-color: rgb(99, 97, 97);
 }
-=======
-    font-weight: 700;
-}
->>>>>>> 129240ff695888987b2aa91e6e2ccebdc9183985:web/static/css/style.css
