@@ -1,3 +1,7 @@
+<!-- 
+    TODO:
+    * add api documentation
+ -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -31,6 +35,50 @@
         </ul>
         </div>
     </nav>
+    <div class="container-fluid">
+        <div class="jumbotron" style="background-color:black; color: aliceblue; margin-top: 60px; opacity: 0.7;">
+            <h3>Extract</h3>
+            <hr/>
+            <p>
+                Our group’s ETL project is based on the Craft Beer project done earlier. We extracted data from 2 csv files.
+                The first is breweries.csv which was cleaned in previous project and had clean data. The second csv is 
+                final_cleaned_beer_4.csv which cleaned up the previous file: cleaned_beer.csv 
+            </p>
+            <h3>Transform</h3>
+            <hr/>
+            <p>
+                Although cleaned_beer.csv had clean data, it needed to be cleaned further. We were able to get the data 
+                into Pandas as a dataframe, and it displayed correctly there. When we tried to put this in the MySQL database, 
+                we were running into errors. The reason for the errors was that there were characters in German language, Spanish / French. 
+                We did encode the data to utf-8 to allow special characters like slashes, underscore, Pound, but it would still not take 
+                the foreign language characters.
+            </p>
+            <p>
+                To solve this we identified few rows with issues, and modified the characters. There were 3 rows that were not working after 
+                modification as well, so we removed them and got the total number of rows from 1403 to 1400 rows.   
+            </p>
+            <h3>Load</h3>
+            <hr/>
+            <p>
+                When creating table in database, we chose 2 tables: beer and breweries. Breweries table has brewery_id as the primary key. 
+                Beer table has id as the primary key and brewery_id as the foreign key referencing the breweries table. The other columns in 
+                2 tables are separate. 
+            </p>
+            <p>
+                We modified the 2 columns with special characters as following to allow loading them in MySQL:<br/>
+                <code>
+                    name VARCHAR(100) character set utf8 <br/>
+                    style VARCHAR(100) character set utf8
+                </code>  
+            </p>
+            <h3>API</h3>
+            <hr/>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, nulla? Incidunt a sapiente, atque alias fuga, 
+                repellat, voluptas aliquam veniam officiis iste obcaecati. Voluptatem quibusdam enim, quos cupiditate debitis consequuntur.  
+            </p>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>  
