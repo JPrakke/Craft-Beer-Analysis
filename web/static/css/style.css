@@ -60,8 +60,9 @@ footer {
 
 header  {
     font-size: 60px;
-    color: aliceblue;
+    color: #000;
     font-style: italic;
+<<<<<<< HEAD:css/style.css
     font-weight: 500;
     font-family: impact
 }
@@ -92,3 +93,7 @@ td:hover::after,
 th:hover::after {
     background-color: black;
 }
+=======
+    font-weight: 700;
+}
+>>>>>>> 129240ff695888987b2aa91e6e2ccebdc9183985:web/static/css/style.css
