@@ -1,13 +1,10 @@
 from flask import Flask, jsonify, render_template
 from config import username, password
-import numpy as np
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func, MetaData
 from sqlalchemy.pool import StaticPool
-import datetime as dt
-from datetime import date
 
 # ################################################
 #  Database Setup
