@@ -46,6 +46,12 @@ nav a:before {
 nav a:hover::before{
     width: 100%;
 }
+header  {
+    font-size: 60px;
+    color: #fdfcfc;
+    font-style: italic;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 body {
     background-image: url("../assets/beer_background.jpg");
