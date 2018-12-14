@@ -1,6 +1,6 @@
+
 nav {
     float:right;
-    opacity: 0.8; 
 }
 
 nav ul {
@@ -10,11 +10,12 @@ nav ul {
 }
 
 nav li {
+    z-index: 100000000 !important;
     display: inline-block;
     margin-left: 70px;
     padding-top: 25 px;
 
-    position: relative;
+     /* position: absolute;  */
 }
 
 nav a {
@@ -62,7 +63,7 @@ header  {
     font-size: 60px;
     color: #fdfcfc;
     font-style: italic;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 table {
