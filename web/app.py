@@ -13,18 +13,17 @@ from datetime import date
 #  Database Setup
 # ################################################
 
-# connection_string = (f"{username}:{password}@127.0.0.1:3306/craftbeerDB")
+connection_string = (f"{username}:{password}@127.0.0.1:3306/craftbeerDB")
 
-# engine = create_engine(f'mysql://{connection_string}',encoding='utf-8',connect_args={'check_same_thread':False},
-#     poolclass=StaticPool)
+engine = create_engine(f'mysql://{connection_string}',encoding='utf-8')
 
-# Base= automap_base()
-# Base.prepare(engine, reflect=True)
+Base= automap_base()
+Base.prepare(engine, reflect=True)
 
-# Beer = Base.classes.beer
-# Breweries = base.classes.breweries
+Beer = Base.classes.beer
+Breweries = Base.classes.breweries
 
-# session. Session(engine)
+session = Session(engine)
 
 #################################################
 # Flask Setup
@@ -73,24 +72,21 @@ def api():
     api_routes = [
         "/api/v1.0/beer",
         "/api/v1.0/breweries",
-        "/api/v1.0/topStyles"
     ]
     return render_template("api.html", api_routes = api_routes)
 
 @app.route("/api/v1.0/beer")
 def beer():
     """json of all beer in dataset"""
-    return("beer")
+    beer_name = session.query(Beer.brewery_id, Beer.name, Beer.style).all()
+    return jsonify(beer_name)
 
 @app.route("/api/v1.0/breweries")
 def breweries():
     """json of all breweries in dataset"""
-    return("breweries")
+    breweries_name = session.query( Breweries.brewery_id, Breweries.name, Breweries.city, Breweries.state).all()
+    return jsonify(breweries_name)
 
-@app.route("/api/v1.0/topStyles")
-def topStyles():
-    """ json of top 10 beer styles"""
-    return("topStyles")
 
 if __name__ == '__main__':
     app.run(debug=False)
